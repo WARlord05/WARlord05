@@ -7,6 +7,7 @@
 
 # 📊 GitHub Stats:
 ![My GitHub Stats](stats.svg)
+![](https://nirzak-streak-stats.vercel.app/?user=WARlord05&theme=vue-dark&hide_border=false)<br/>
 
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=WARlord05&theme=vue-dark&no-frame=false&no-bg=true&margin-w=4)
