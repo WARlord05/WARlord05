@@ -1,92 +1,75 @@
 
     <svg width="700" height="290" viewBox="0 0 700 290" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1" y="1" width="698" height="288" rx="8" ry="8" fill="#1F2937" stroke="#4B5563" stroke-width="2"/>
-
-        <line x1="250.0" y1="20" x2="250.0" y2="60" stroke="#4B5563" stroke-width="1"/>
-        <line x1="450.0" y1="20" x2="450.0" y2="60" stroke="#4B5563" stroke-width="1"/>
-        
-        <text x="350.0" y="45" font-family="Segoe UI, sans-serif" font-size="24" font-weight="bold" fill="#F3F4F6" text-anchor="middle">Top Languages</text>
-
-        <line x1="20" y1="70" x2="680" y2="70" stroke="#4B5563" stroke-width="1" stroke-opacity="0.5"/>
-        <line x1="20" y1="270" x2="680" y2="270" stroke="#4B5563" stroke-width="1" stroke-opacity="0.5"/>
-        
-        <line x1="175.0" y1="70" x2="175.0" y2="270" stroke="#4B5563" stroke-width="0.5" stroke-opacity="0.3"/>
-        <line x1="350.0" y1="70" x2="350.0" y2="270" stroke="#4B5563" stroke-width="0.5" stroke-opacity="0.3"/>
-        <line x1="525.0" y1="70" x2="525.0" y2="270" stroke="#4B5563" stroke-width="0.5" stroke-opacity="0.3"/>
-
-
-        <g transform="translate(40, 95)"> 
-            <text x="0" y="10" font-family="Segoe UI, sans-serif" font-size="16" fill="#F3F4F6">
+        <rect x="1" y="1" width="698" height="288" rx="8" ry="8" fill='#1F2937' stroke='#4B5563' stroke-width="2"/>
+        <line x1="250.0" y1="20" x2="250.0" y2="60" stroke='#4B5563' stroke-width="1"/>
+        <line x1="450.0" y1="20" x2="450.0" y2="60" stroke='#4B5563' stroke-width="1"/>
+        <text x="350.0" y="45" font-family="Segoe UI, sans-serif" font-size="24" font-weight="bold" fill='#F3F4F6' text-anchor="middle">Top Languages</text>
+        <line x1="20" y1="70" x2="680" y2="70" stroke='#4B5563' stroke-width="1" stroke-opacity="0.5"/>
+        <line x1="20" y1="270" x2="680" y2="270" stroke='#4B5563' stroke-width="1" stroke-opacity="0.5"/>
+        <line x1="175.0" y1="70" x2="175.0" y2="270" stroke='#4B5563' stroke-width="0.5" stroke-opacity="0.3"/>
+        <line x1="350.0" y1="70" x2="350.0" y2="270" stroke='#4B5563' stroke-width="0.5" stroke-opacity="0.3"/>
+        <line x1="525.0" y1="70" x2="525.0" y2="270" stroke='#4B5563' stroke-width="0.5" stroke-opacity="0.3"/>
+        <g transform="translate(40, 95)">
+    
+            <text x="0" y="10" font-family="Segoe UI, sans-serif" font-size="16" fill='#F3F4F6'>
                 Python
             </text>
+            <rect x="120" y="2" width="480" height="10" fill='#D1D5DB' rx="5" ry="5"/>
+            <rect x="120" y="2" width="350.8480913204071" height="10" fill='#6EE7B7' rx="5" ry="5"/>
             
-            <text x="640" y="10" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill="#9CA3AF">
-                73.3%
+            <text x="660" y="10" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill='#9CA3AF'>
+                73.1%
             </text>
-            
-            <rect x="120" y="2" width="540" height="10" fill="#D1D5DB" rx="5" ry="5"/>
-            
-            <rect x="120" y="2" width="395.5909201066322" height="10" fill="#6EE7B7" rx="5" ry="5"/>
         
-            <text x="0" y="40" font-family="Segoe UI, sans-serif" font-size="16" fill="#F3F4F6">
+            <text x="0" y="40" font-family="Segoe UI, sans-serif" font-size="16" fill='#F3F4F6'>
                 Kotlin
             </text>
+            <rect x="120" y="32" width="480" height="10" fill='#D1D5DB' rx="5" ry="5"/>
+            <rect x="120" y="32" width="57.9610045967254" height="10" fill='#6EE7B7' rx="5" ry="5"/>
             
-            <text x="640" y="40" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill="#9CA3AF">
-                12.0%
+            <text x="660" y="40" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill='#9CA3AF'>
+                12.1%
             </text>
-            
-            <rect x="120" y="32" width="540" height="10" fill="#D1D5DB" rx="5" ry="5"/>
-            
-            <rect x="120" y="32" width="64.80814282252202" height="10" fill="#6EE7B7" rx="5" ry="5"/>
         
-            <text x="0" y="70" font-family="Segoe UI, sans-serif" font-size="16" fill="#F3F4F6">
+            <text x="0" y="70" font-family="Segoe UI, sans-serif" font-size="16" fill='#F3F4F6'>
                 CSS
             </text>
+            <rect x="120" y="62" width="480" height="10" fill='#D1D5DB' rx="5" ry="5"/>
+            <rect x="120" y="62" width="34.85202879049228" height="10" fill='#6EE7B7' rx="5" ry="5"/>
             
-            <text x="640" y="70" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill="#9CA3AF">
-                7.2%
+            <text x="660" y="70" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill='#9CA3AF'>
+                7.3%
             </text>
-            
-            <rect x="120" y="62" width="540" height="10" fill="#D1D5DB" rx="5" ry="5"/>
-            
-            <rect x="120" y="62" width="38.96922206963406" height="10" fill="#6EE7B7" rx="5" ry="5"/>
         
-            <text x="0" y="100" font-family="Segoe UI, sans-serif" font-size="16" fill="#F3F4F6">
+            <text x="0" y="100" font-family="Segoe UI, sans-serif" font-size="16" fill='#F3F4F6'>
                 Batchfile
             </text>
+            <rect x="120" y="92" width="480" height="10" fill='#D1D5DB' rx="5" ry="5"/>
+            <rect x="120" y="92" width="17.677434503436256" height="10" fill='#6EE7B7' rx="5" ry="5"/>
             
-            <text x="640" y="100" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill="#9CA3AF">
+            <text x="660" y="100" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill='#9CA3AF'>
                 3.7%
             </text>
-            
-            <rect x="120" y="92" width="540" height="10" fill="#D1D5DB" rx="5" ry="5"/>
-            
-            <rect x="120" y="92" width="19.765732288553195" height="10" fill="#6EE7B7" rx="5" ry="5"/>
         
-            <text x="0" y="130" font-family="Segoe UI, sans-serif" font-size="16" fill="#F3F4F6">
+            <text x="0" y="130" font-family="Segoe UI, sans-serif" font-size="16" fill='#F3F4F6'>
                 HTML
             </text>
+            <rect x="120" y="122" width="480" height="10" fill='#D1D5DB' rx="5" ry="5"/>
+            <rect x="120" y="122" width="13.962485663454679" height="10" fill='#6EE7B7' rx="5" ry="5"/>
             
-            <text x="640" y="130" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill="#9CA3AF">
+            <text x="660" y="130" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill='#9CA3AF'>
                 2.9%
             </text>
-            
-            <rect x="120" y="122" width="540" height="10" fill="#D1D5DB" rx="5" ry="5"/>
-            
-            <rect x="120" y="122" width="15.61192341869295" height="10" fill="#6EE7B7" rx="5" ry="5"/>
         
-            <text x="0" y="160" font-family="Segoe UI, sans-serif" font-size="16" fill="#F3F4F6">
+            <text x="0" y="160" font-family="Segoe UI, sans-serif" font-size="16" fill='#F3F4F6'>
                 JavaScript
             </text>
+            <rect x="120" y="152" width="480" height="10" fill='#D1D5DB' rx="5" ry="5"/>
+            <rect x="120" y="152" width="4.698955125484282" height="10" fill='#6EE7B7' rx="5" ry="5"/>
             
-            <text x="640" y="160" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill="#9CA3AF">
+            <text x="660" y="160" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill='#9CA3AF'>
                 1.0%
             </text>
-            
-            <rect x="120" y="152" width="540" height="10" fill="#D1D5DB" rx="5" ry="5"/>
-            
-            <rect x="120" y="152" width="5.254059293965587" height="10" fill="#6EE7B7" rx="5" ry="5"/>
         
         </g>
     </svg>
