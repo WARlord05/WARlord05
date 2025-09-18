@@ -8,7 +8,7 @@ GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
 USERNAME = "WARlord05"  # Your GitHub username
 API_URL = "https://api.github.com"
 HEADERS = {"Authorization": f"token {GITHUB_TOKEN}"}
-SVG_PATH = "stats.svg"  # We will save to this SVG file
+SVG_PATH = "stats.svg"
 
 def get_repos():
     """Fetch all non-forked repositories for the user."""
@@ -71,7 +71,7 @@ def generate_stats_svg(lang_stats):
     '''
 
     bar_spacing = 30
-    max_bar_width = card_width - 220 # Adjusted width to create space for text
+    max_bar_width = card_width - 220
     
     for i, (lang, bytes_count) in enumerate(top_langs):
         percentage = (bytes_count / total_bytes) * 100
@@ -85,7 +85,7 @@ def generate_stats_svg(lang_stats):
             <rect x="120" y="{y_pos + 2}" width="{max_bar_width}" height="10" fill='{colors["bar_bg"]}' rx="5" ry="5"/>
             <rect x="120" y="{y_pos + 2}" width="{bar_fill_width}" height="10" fill='{colors["bar_fill"]}' rx="5" ry="5"/>
             
-            <text x="{card_width - 40}" y="{y_pos + 10}" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill='{colors["text_sub"]}'>
+            <text x="{card_width - 60}" y="{y_pos + 10}" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill='{colors["text_sub"]}'>
                 {percentage:.1f}%
             </text>
         '''
