@@ -31,11 +31,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit and push if README changed
+      - name: Commit and push if SVG changed
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "docs: auto-update README stats"
-          file_pattern: README.md
+          commit_message: "docs: auto-update stats SVG"
+          file_pattern: stats.svg # <-- CHANGE THIS LINE
           commit_user_name: GitHub Actions Bot
           commit_user_email: actions@github.com
           commit_author: GitHub Actions Bot <actions@github.com>
