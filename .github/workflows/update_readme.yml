@@ -2,7 +2,7 @@ name: Update README Stats
 
 on:
   schedule:
-    # Runs every 24 hours
+    # Runs once a day at midnight UTC. You can change the schedule.
     - cron: '0 0 * * *'
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
 
@@ -10,9 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     
+    # This is the crucial permission that allows the action to write to your repo.
     permissions:
       contents: write
-      
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
