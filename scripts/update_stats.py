@@ -3,11 +3,9 @@ import requests
 from collections import defaultdict
 import re
 
-# --- Environment Variables ---
+# --- Environment Variables & Constants ---
 GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
 USERNAME = "WARlord05"  # Your GitHub username
-
-# --- Constants ---
 API_URL = "https://api.github.com"
 HEADERS = {"Authorization": f"token {GITHUB_TOKEN}"}
 README_PATH = "README.md"
@@ -15,10 +13,11 @@ START_COMMENT = ""
 END_COMMENT = ""
 
 def get_repos():
-    """Fetch all repositories for the user."""
+    """Fetch all non-forked repositories for the user."""
     repos = []
     page = 1
     while True:
+        # Fetch repositories page by page
         response = requests.get(f"{API_URL}/users/{USERNAME}/repos?page={page}&per_page=100", headers=HEADERS)
         if response.status_code != 200:
             raise Exception(f"Failed to fetch repos: {response.content}")
@@ -40,9 +39,9 @@ def get_language_stats(repos):
     return lang_stats
 
 def generate_stats_markdown(lang_stats):
-    """Generate Markdown text for the stats."""
+    """Generate the Markdown text for the language stats."""
     if not lang_stats:
-        return ""
+        return "Could not fetch language stats."
     
     total_bytes = sum(lang_stats.values())
     top_langs = sorted(lang_stats.items(), key=lambda item: item[1], reverse=True)[:5]
@@ -58,19 +57,21 @@ def generate_stats_markdown(lang_stats):
 
 def update_readme(stats_markdown):
     """Update the README.md file with the new stats."""
-    with open(README_PATH, "r") as f:
+    with open(README_PATH, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Use regex to find and replace the content between comments
+    # This regex finds the content between the start and end comments and replaces it.
     pattern = f"{START_COMMENT}(.*){END_COMMENT}"
+    
+    # If the pattern is not found, the original content is kept.
     new_content = re.sub(pattern, f"{START_COMMENT}\n{stats_markdown}\n{END_COMMENT}", content, flags=re.DOTALL)
 
-    with open(README_PATH, "w") as f:
+    with open(README_PATH, "w", encoding="utf-8") as f:
         f.write(new_content)
 
 if __name__ == "__main__":
     if not GITHUB_TOKEN:
-        raise ValueError("GITHUB_TOKEN is not set in environment variables.")
+        raise ValueError("A GITHUB_TOKEN is required to run this script.")
     
     print("Fetching repository data...")
     user_repos = get_repos()
