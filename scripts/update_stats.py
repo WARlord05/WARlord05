@@ -41,66 +41,55 @@ def generate_stats_svg(lang_stats):
         return "Could not fetch language stats."
     
     total_bytes = sum(lang_stats.values())
-    top_langs = sorted(lang_stats.items(), key=lambda item: item[1], reverse=True)[:6] # Up to 6 languages for this layout
+    top_langs = sorted(lang_stats.items(), key=lambda item: item[1], reverse=True)[:6]
 
-    # --- SVG Colors and Dimensions (tuned to match your example) ---
     colors = {
-        "bg_dark": "#1F2937",        # Dark background color
-        "border": "#4B5563",         # Border color
-        "line": "#4B5563",           # Subtle line color for separators/grid
-        "text_main": "#F3F4F6",      # Main text color (light)
-        "text_sub": "#9CA3AF",       # Subdued text color
-        "bar_bg": "#D1D5DB",         # Progress bar background (light gray)
-        "bar_fill": "#6EE7B7"        # Bright green fill for bars
+        "bg_dark": "#1F2937",
+        "border": "#4B5563",
+        "line": "#4B5563",
+        "text_main": "#F3F4F6",
+        "text_sub": "#9CA3AF",
+        "bar_bg": "#D1D5DB",
+        "bar_fill": "#6EE7B7"
     }
 
-    card_width = 700  # Increased width for better spacing
-    card_height = 250 + (len(top_langs) - 5) * 40 # Adjust height based on number of languages
+    card_width = 700
+    card_height = 250 + (len(top_langs) - 5) * 40
     
-    # Base SVG structure with rounded rectangle border
     svg = f'''
     <svg width="{card_width}" height="{card_height}" viewBox="0 0 {card_width} {card_height}" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1" y="1" width="{card_width - 2}" height="{card_height - 2}" rx="8" ry="8" fill="{colors["bg_dark"]}" stroke="{colors["border"]}" stroke-width="2"/>
+        <rect x="1" y="1" width="{card_width - 2}" height="{card_height - 2}" rx="8" ry="8" fill='{colors["bg_dark"]}' stroke='{colors["border"]}' stroke-width="2"/>
+        <line x1="{card_width / 2 - 100}" y1="20" x2="{card_width / 2 - 100}" y2="60" stroke='{colors["line"]}' stroke-width="1"/>
+        <line x1="{card_width / 2 + 100}" y1="20" x2="{card_width / 2 + 100}" y2="60" stroke='{colors["line"]}' stroke-width="1"/>
+        <text x="{card_width / 2}" y="45" font-family="Segoe UI, sans-serif" font-size="24" font-weight="bold" fill='{colors["text_main"]}' text-anchor="middle">Top Languages</text>
+        <line x1="20" y1="70" x2="{card_width - 20}" y2="70" stroke='{colors["line"]}' stroke-width="1" stroke-opacity="0.5"/>
+        <line x1="20" y1="{card_height - 20}" x2="{card_width - 20}" y2="{card_height - 20}" stroke='{colors["line"]}' stroke-width="1" stroke-opacity="0.5"/>
+        <line x1="{card_width / 4}" y1="70" x2="{card_width / 4}" y2="{card_height - 20}" stroke='{colors["line"]}' stroke-width="0.5" stroke-opacity="0.3"/>
+        <line x1="{card_width / 2}" y1="70" x2="{card_width / 2}" y2="{card_height - 20}" stroke='{colors["line"]}' stroke-width="0.5" stroke-opacity="0.3"/>
+        <line x1="{card_width * 3 / 4}" y1="70" x2="{card_width * 3 / 4}" y2="{card_height - 20}" stroke='{colors["line"]}' stroke-width="0.5" stroke-opacity="0.3"/>
+        <g transform="translate(40, 95)">
+    '''
 
-        <line x1="{card_width / 2 - 100}" y1="20" x2="{card_width / 2 - 100}" y2="60" stroke="{colors["line"]}" stroke-width="1"/>
-        <line x1="{card_width / 2 + 100}" y1="20" x2="{card_width / 2 + 100}" y2="60" stroke="{colors["line"]}" stroke-width="1"/>
-        
-        <text x="{card_width / 2}" y="45" font-family="Segoe UI, sans-serif" font-size="24" font-weight="bold" fill="{colors["text_main"]}" text-anchor="middle">Top Languages</text>
-
-        <line x1="20" y1="70" x2="{card_width - 20}" y2="70" stroke="{colors["line"]}" stroke-width="1" stroke-opacity="0.5"/>
-        <line x1="20" y1="{card_height - 20}" x2="{card_width - 20}" y2="{card_height - 20}" stroke="{colors["line"]}" stroke-width="1" stroke-opacity="0.5"/>
-        
-        <line x1="{card_width / 4}" y1="70" x2="{card_width / 4}" y2="{card_height - 20}" stroke="{colors["line"]}" stroke-width="0.5" stroke-opacity="0.3"/>
-        <line x1="{card_width / 2}" y1="70" x2="{card_width / 2}" y2="{card_height - 20}" stroke="{colors["line"]}" stroke-width="0.5" stroke-opacity="0.3"/>
-        <line x1="{card_width * 3 / 4}" y1="70" x2="{card_width * 3 / 4}" y2="{card_height - 20}" stroke="{colors["line"]}" stroke-width="0.5" stroke-opacity="0.3"/>
-
-
-        <g transform="translate(40, 95)"> '''
-
-    # Loop to create progress bars for each language
-    bar_spacing = 30 # Vertical space between bars
-    max_bar_width = card_width - 160 # Max width for the bar itself, considering padding
+    bar_spacing = 30
+    max_bar_width = card_width - 220 # Adjusted width to create space for text
     
     for i, (lang, bytes_count) in enumerate(top_langs):
         percentage = (bytes_count / total_bytes) * 100
-        bar_fill_width = (percentage / 100) * max_bar_width # Actual fill width
+        bar_fill_width = (percentage / 100) * max_bar_width
         y_pos = i * bar_spacing
 
         svg += f'''
-            <text x="0" y="{y_pos + 10}" font-family="Segoe UI, sans-serif" font-size="16" fill="{colors["text_main"]}">
+            <text x="0" y="{y_pos + 10}" font-family="Segoe UI, sans-serif" font-size="16" fill='{colors["text_main"]}'>
                 {lang}
             </text>
+            <rect x="120" y="{y_pos + 2}" width="{max_bar_width}" height="10" fill='{colors["bar_bg"]}' rx="5" ry="5"/>
+            <rect x="120" y="{y_pos + 2}" width="{bar_fill_width}" height="10" fill='{colors["bar_fill"]}' rx="5" ry="5"/>
             
-            <text x="{max_bar_width + 100}" y="{y_pos + 10}" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill="{colors["text_sub"]}">
+            <text x="{card_width - 40}" y="{y_pos + 10}" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill='{colors["text_sub"]}'>
                 {percentage:.1f}%
             </text>
-            
-            <rect x="120" y="{y_pos + 2}" width="{max_bar_width}" height="10" fill="{colors["bar_bg"]}" rx="5" ry="5"/>
-            
-            <rect x="120" y="{y_pos + 2}" width="{bar_fill_width}" height="10" fill="{colors["bar_fill"]}" rx="5" ry="5"/>
         '''
     
-    # Closing tags
     svg += '''
         </g>
     </svg>
