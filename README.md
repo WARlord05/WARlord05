@@ -10,10 +10,10 @@
 ![](https://nirzak-streak-stats.vercel.app/?user=WARlord05&theme=vue-dark&hide_border=false)<br/>
 
 ## 🏆 GitHub Trophies
-[![trophy](https://github-profile-trophy-winning.vercel.app/?username=WARlord05&theme=onedark&column=7&margin-w=15)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](https://github-profile-trophy-fork-two.vercel.app/?username=WARlord05&theme=tokyonight&no-frame=false&margin-w=15)](https://github.com/ryo-ma/github-profile-trophy)
 
 ### 🔝 Top Contributed Repo
-[![Repo Card](https://github-readme-stats.vercel.app/api/top-langs/?username=WARlord05&layout=compact&theme=tokyonight)](https://github.com/WARlord05)
+![Top Langs](https://github-readme-stats-six-phi.vercel.app/api/top-langs/?username=WARlord05&layout=compact&theme=tokyonight&cache_seconds=1800)
 
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=gruvbox)
