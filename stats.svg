@@ -12,63 +12,63 @@
         <g transform="translate(40, 95)">
     
             <text x="0" y="10" font-family="Segoe UI, sans-serif" font-size="16" fill='#F3F4F6'>
-                Python
+                TypeScript
             </text>
             <rect x="120" y="2" width="480" height="10" fill='#D1D5DB' rx="5" ry="5"/>
-            <rect x="120" y="2" width="350.76055523423946" height="10" fill='#6EE7B7' rx="5" ry="5"/>
+            <rect x="120" y="2" width="286.65076541085847" height="10" fill='#6EE7B7' rx="5" ry="5"/>
             
             <text x="640" y="10" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill='#9CA3AF'>
-                73.1%
+                59.7%
             </text>
         
             <text x="0" y="40" font-family="Segoe UI, sans-serif" font-size="16" fill='#F3F4F6'>
-                Kotlin
+                Python
             </text>
             <rect x="120" y="32" width="480" height="10" fill='#D1D5DB' rx="5" ry="5"/>
-            <rect x="120" y="32" width="58.00028918449972" height="10" fill='#6EE7B7' rx="5" ry="5"/>
+            <rect x="120" y="32" width="94.85464036442549" height="10" fill='#6EE7B7' rx="5" ry="5"/>
             
             <text x="640" y="40" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill='#9CA3AF'>
-                12.1%
+                19.8%
             </text>
         
             <text x="0" y="70" font-family="Segoe UI, sans-serif" font-size="16" fill='#F3F4F6'>
-                CSS
+                HTML
             </text>
             <rect x="120" y="62" width="480" height="10" fill='#D1D5DB' rx="5" ry="5"/>
-            <rect x="120" y="62" width="34.87565066512435" height="10" fill='#6EE7B7' rx="5" ry="5"/>
+            <rect x="120" y="62" width="46.35163932823711" height="10" fill='#6EE7B7' rx="5" ry="5"/>
             
             <text x="640" y="70" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill='#9CA3AF'>
-                7.3%
+                9.7%
             </text>
         
             <text x="0" y="100" font-family="Segoe UI, sans-serif" font-size="16" fill='#F3F4F6'>
-                Batchfile
+                CSS
             </text>
             <rect x="120" y="92" width="480" height="10" fill='#D1D5DB' rx="5" ry="5"/>
-            <rect x="120" y="92" width="17.689415847310585" height="10" fill='#6EE7B7' rx="5" ry="5"/>
+            <rect x="120" y="92" width="26.240982228391562" height="10" fill='#6EE7B7' rx="5" ry="5"/>
             
             <text x="640" y="100" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill='#9CA3AF'>
-                3.7%
+                5.5%
             </text>
         
             <text x="0" y="130" font-family="Segoe UI, sans-serif" font-size="16" fill='#F3F4F6'>
-                HTML
+                Kotlin
             </text>
             <rect x="120" y="122" width="480" height="10" fill='#D1D5DB' rx="5" ry="5"/>
-            <rect x="120" y="122" width="13.97194910352805" height="10" fill='#6EE7B7' rx="5" ry="5"/>
+            <rect x="120" y="122" width="15.684764120510664" height="10" fill='#6EE7B7' rx="5" ry="5"/>
             
             <text x="640" y="130" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill='#9CA3AF'>
-                2.9%
+                3.3%
             </text>
         
             <text x="0" y="160" font-family="Segoe UI, sans-serif" font-size="16" fill='#F3F4F6'>
-                JavaScript
+                Batchfile
             </text>
             <rect x="120" y="152" width="480" height="10" fill='#D1D5DB' rx="5" ry="5"/>
-            <rect x="120" y="152" width="4.70213996529786" height="10" fill='#6EE7B7' rx="5" ry="5"/>
+            <rect x="120" y="152" width="6.357895560030499" height="10" fill='#6EE7B7' rx="5" ry="5"/>
             
             <text x="640" y="160" text-anchor="end" font-family="Segoe UI, sans-serif" font-size="14" fill='#9CA3AF'>
-                1.0%
+                1.3%
             </text>
         
         </g>
